@@ -1,15 +1,23 @@
 <template>
-    <div class="container pb-2">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header">Title</div>
+    <div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{  title }}</h5>
 
-                    <div class="card-body">
-                        Content
-                    </div>
-                </div>
-            </div>
+            <p class="card-text">
+                {{  description }} | $ {{ price }}
+            </p>
         </div>
     </div>
 </template>
+<script>
+export default {
+        props: {
+            title: String,
+            description: String,
+            price: Number
+        },
+    mounted() {
+       // console.log(this.itemTitle);
+    },
+};
+</script>
